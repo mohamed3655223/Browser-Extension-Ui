@@ -1,0 +1,259 @@
+body{
+    margin: 0;
+    background-image: repeating-linear-gradient(
+        #091540,
+        #040918 
+        );
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    background-attachment: fixed;
+    transition: all 0.3s;
+    color: white;
+}
+
+button{
+    color: white;
+}
+
+.light-mode-button{
+    color: #09153e;
+    background-color: white !important;
+    border-color: #6d6d6d !important;
+}
+
+.light-mode-button:hover{
+    border-color: #de473f !important;
+    background-color: #de473f !important;
+}
+
+.light-mode-body{
+        background-image: repeating-linear-gradient(
+        #d6e2f5,
+        #ededed
+        );
+}
+
+html{
+    height: 100vh;
+}
+
+.container{
+    padding: 20px 60px;
+    margin: 20px auto;
+}
+.header{
+    background-color: #2b303f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+@media(max-width:767px){
+    .header{
+        padding: 7px;
+    }
+}
+
+.light-mode-word{
+    color: #09153e;   
+}
+
+.light-mode-header,
+.light-mode-card{
+    background-color: white !important;
+    color: #09153e !important;
+}
+
+img,
+.card .down button,
+.control button,
+.switch,.slider {
+    cursor: pointer;
+}
+.landing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+@media(max-width:767px){
+    .landing .word h2{
+        font-size: 15px;
+        margin-right: 30px;
+        margin-left: -15px;
+    }
+    .landing .control{
+        display: flex;
+    }
+    .control button{
+        margin-right: 5px;
+    }
+}
+.control button{
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    background-color: #212636;
+    border: 1px solid #212636;
+    cursor: pointer;
+}
+
+@media(max-width: 767px){
+    .control{
+        display: flex;
+        justify-content: space-between;
+    }
+    .landing .word h2{
+        font-size: 15px;
+    }
+}
+
+
+.control .active{
+    background-color: #de473f;
+}
+
+/* Toggle Buttons */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #de473f;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #de473f;
+}
+
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* == Toggle Buttons == */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    gap: 15px;
+    align-items: center;
+    justify-self: center;
+}
+
+@media(max-width:767px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        max-width: 400px;
+    }
+}
+
+@media(min-width:768px) and (max-width: 991px){
+    .cards{
+        grid-template-columns: repeat(2 , 320px);
+    }
+}
+
+@media(min-width:992px) and (max-width: 1199px){
+    .cards{
+        grid-template-columns: repeat(2 , 400px);
+    }
+}
+.card{
+    background-color: #2b303f;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.card .up-part
+{
+    display: flex;
+    align-items: center;
+}
+
+.card .up-part img{
+    margin-right: 15px;
+}
+
+.card .des h3
+{
+    margin: 0 0 5px 0;
+}
+
+.card .des p{
+    margin : 0;
+}
+
+.card .down{
+    margin-top: 60px;
+}
+
+.card .down{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .down button{
+    background: transparent;
+    padding: 10px;
+    border-radius: 18px;
+    border: 1px solid #6d6d6d;
+}
+
+.card .down button:hover{
+    background-color: hsl(226, 11%, 37%);
+    border-color: #de473f;
+}
+
+
+.hidden{
+    display: none !important;
+}
